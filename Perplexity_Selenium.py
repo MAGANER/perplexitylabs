@@ -29,7 +29,7 @@ class Perplexity:
     To get started, you need to create an instance of this class.
     For now, this class only supports one answer at a time.
     """
-    def __init__(self):
+    def __init__(self, model="llama-2-13b-chat"):
         # Initialize a random user agent
         ua = UserAgent()
         self.user_agent = ua.random
@@ -55,7 +55,7 @@ class Perplexity:
         # llama-2-7b-chat
         # llama-2-13b-chat
         # llama-2-70b-chat
-        self.model = "llama-2-13b-chat"
+        self.model = model
         
 
     def search(self, query: str):
